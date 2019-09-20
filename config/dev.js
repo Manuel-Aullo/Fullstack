@@ -1,8 +1,8 @@
 module.exports = {
-    googleClientID: "asdasdntent.com",
-    googleClientSecret: "1h93Mzadsdad",
-    linkedinClientID: "77bkyadsc",
-    linkedinClientSecret: "ConP3CCsaj8",
-    mongoURI: "mosa:/saas978.@ds213538.mlasevelop",
-    cookieKey: "lkdkslbnlvsbdopv9sa9d80v"
+    googleClientID: "610335018060-vqspdgkgf8jg255ak9cgak85bnuuhvfv.apps.googleusercontent.com",
+    googleClientSecret: "1h93MzFsb8niPAg__u2qu19O",
+    linkedinClientID: "77bkysewmi0lnc",
+    linkedinClientSecret: "ConP3CCdcXleqWj8",
+    mongoURI: "mongodb://Aullo:Aullo1978.@ds213538.mlab.com:13538/emaily-develop",
+    cookieKey: "lkdkslbnlvsbdopv9ugdy8sdhvbsödjbvkbsövuo8s9d80v"
 }
