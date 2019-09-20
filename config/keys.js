@@ -1,3 +1,4 @@
+console.log("process.eventNames.NODE_ENV", process.eventNames.NODE_ENV);
 if (process.eventNames.NODE_ENV === 'production') {
     module.exports = require('./prod');
 } else {
