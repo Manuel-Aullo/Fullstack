@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 class Header extends React.Component {
     render() {
@@ -11,7 +12,7 @@ class Header extends React.Component {
                         </a>
                         <ul className="right">
                             <li>
-                                <a>Login with Google</a>
+                                {this.props.auth ? <a href="/api/logout">Logout</a> : <a href="/auth/google">Login with Google</a>}
                             </li>
                         </ul>
                     </div>
@@ -21,4 +22,12 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+// entire state object from the redux store: here we care about auth from 
+// /reducers/index.js we destructure the auth property off the state object
+function mapStateToProps( { auth } ) { 
+    return { auth };
+}
+
+// Hook up the component to the redux store with connect helper
+// and pass de data as the first argument
+export default connect(mapStateToProps) (Header);
