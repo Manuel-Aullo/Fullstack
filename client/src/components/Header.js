@@ -1,19 +1,30 @@
-import React from "react";
+import React, {Component} from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import Payments from "./Payments";
 
-class Header extends React.Component {
+class Header extends Component {
+    
     render() {
         return (
             <nav>
                 <div className="container">
                     <div className="nav-wrapper">
-                        <a className="left brand-logo">
+                        <Link
+                            to={this.props.auth ? "/surveys" : "/"} 
+                            className="left brand-logo"
+                        >
                             Emaily
-                        </a>
+                        </Link>
                         <ul className="right">
-                            <li>
-                                {this.props.auth ? <a href="/api/logout">Logout</a> : <a href="/auth/google">Login with Google</a>}
-                            </li>
+                            {this.props.auth ? 
+                                <React.Fragment>
+                                    <li key="pay"><Payments /></li>
+                                    <li key="logout"><a href="/api/logout">Logout</a></li>
+                                </React.Fragment>
+                                : 
+                                <li key="login"><a href="/auth/google">Login with Google</a></li>
+                            }
                         </ul>
                     </div>
                 </div>

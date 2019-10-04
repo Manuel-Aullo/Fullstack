@@ -4,10 +4,10 @@ import { connect } from "react-redux"; // compatibility between react and redux 
 import * as actions from "../actions"; // import action creators
 
 import Header from "./Header";
+import Landing from "./Landing";
 
 const SurveyNew = () => <h2>SurveyNew</h2>;
 const Dashboard = () => <h2>Dashboard</h2>;
-const Landing = () => <h2>Landing</h2>;
 
 class App extends Component {
     componentDidMount() {
